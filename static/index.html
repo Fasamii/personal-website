@@ -3,6 +3,7 @@
 
 <head>
 	<title>MGK - Personal website</title>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
@@ -37,32 +38,31 @@
 </head>
 
 <body>
-	<!-- <canvas id="matrix-bg"></canvas> -->
 	<nav>
 		<span id="my-name-logo">
 			MGK
 		</span>
 		<ul>
 			<li>
-				<a href="index.html" class="font button current" type="button">STATS</a>
+				<a href="index.html" class="font button glitch current" type="button">STATS</a>
 			</li>
 			<li>
-				<a href="links.html" class="font button" type="button">LINKS</a>
+				<a href="links.html" class="font button glitch" type="button">LINKS</a>
 			</li>
 			<li>
-				<a href="projects.html" class="font button" type="button">PROJECTS</a>
+				<a href="projects.html" class="font button glitch" type="button">PROJECTS</a>
 			</li>
 			<li>
-				<a href="contact.html" class="font button" type="button">CONTACT</a>
+				<a href="contact.html" class="font button glitch" type="button">CONTACT</a>
 			</li>
 		</ul>
 	</nav>
 	<main>
 
 		<section>
-			<span class="font-bold">Mikołaj G.&nbsp;Kozłowski</span>&ThickSpace;
+			<span class="font-bold glitch">Mikołaj G.&nbsp;Kozłowski</span>&ThickSpace;
 			<span class="font">AGE:16</span><br>
-			<p class="font">CODE VESSEL</span>
+			<p class="font">CODE VESSEL</p>
 		</section>
 
 		<section>
@@ -82,7 +82,7 @@
 						aria-label="JAVASCRIPT : WELL INTERMEDIATE"></progress>
 				</li>
 				<li>
-					<label for="skill-css" class="font">CSS : INTERMEDIATE & HATE</label>
+					<label for="skill-css" class="font">CSS : INTERMEDIATE</label>
 					<progress id="skill-css" value="60" max="100"
 						aria-label="CSS : INTERMEDIATE & HATE"></progress>
 				</li>
@@ -130,7 +130,7 @@
 		</section>
 
 		<section>
-			<h3 class="font-bold">Platforms & OSs</h3>
+			<h3 class="font-bold">PLATFORMS & OSs</h3>
 			<ul class="skills-list">
 				<li>
 					<label for="skill-linux" class="font">LINUX : EXPERIENCED</label>
@@ -169,7 +169,7 @@
 
 		<section>
 			<h3 class="font-bold">DATABASEs & BACKEND</h3>
-			<ul>
+			<ul class="skills-list">
 				<li>
 					<label for="skill-sql" class="font">SQL : INTERMEDIATE</label>
 					<progress id="skill-sql" value="30" max="100" aria-label="SQL : INTERMEDIATE"></progress>
@@ -182,12 +182,12 @@
 			<ul class="skills-list">
 				<li>
 					<label for="skill-algorithms" class="font">ALGORITHMS : INTERMEDIATE</label>
-					<progress id="skill-math" value="50" max="100"
+					<progress id="skill-algorithms" value="50" max="100"
 						aria-label="ALGORITHMS : INTERMEDIATE"></progress>
 				</li>
 				<li>
 					<label for="skill-data-structures" class="font">DATA STRUCTURES : INTERMEDIATE</label>
-					<progress id="skill-math" value="30" max="100"
+					<progress id="skill-algorithms" value="30" max="100"
 						aria-label="DATA STRUCTURES : INTERMEDIATE"></progress>
 				</li>
 				<li>
@@ -224,84 +224,6 @@
 		</section>
 
 	</main>
-
-	<!-- <script> -->
-	<!-- 	// Matrix Rain Effect -->
-	<!-- 	function initMatrix() { -->
-	<!-- 		const canvas = document.getElementById('matrix-bg'); -->
-	<!-- 		const ctx = canvas.getContext('2d'); -->
-	<!---->
-	<!-- 		canvas.width = window.innerWidth; -->
-	<!-- 		canvas.height = window.innerHeight; -->
-	<!---->
-	<!-- 		const matrix = "00000000001111111111000001111100112@#$%^&*()*&^%+-/~{[|`]}"; -->
-	<!-- 		const matrixArray = matrix.split(""); -->
-	<!---->
-	<!-- 		const fontSize = 20; // Bigger characters -->
-	<!-- 		const columns = canvas.width / fontSize; -->
-	<!---->
-	<!-- 		const drops = []; -->
-	<!-- 		for (let x = 0; x < columns; x++) { -->
-	<!-- 			drops[x] = 1; -->
-	<!-- 		} -->
-	<!---->
-	<!-- 		function draw() { -->
-	<!-- 			ctx.fillStyle = 'rgba(0, 0, 0, 0.02)'; // Slower fade (was 0.04) -->
-	<!-- 			ctx.fillRect(0, 0, canvas.width, canvas.height); -->
-	<!---->
-	<!-- 			ctx.fillStyle = '#ffffff'; // White characters -->
-	<!-- 			ctx.font = fontSize + 'px "Syne Mono", monospace'; -->
-	<!---->
-	<!-- 			for (let i = 0; i < drops.length; i++) { -->
-	<!-- 				const text = matrixArray[Math.floor(Math.random() * matrixArray.length)]; -->
-	<!-- 				ctx.fillText(text, i * fontSize, drops[i] * fontSize); -->
-	<!---->
-	<!-- 				if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) { -->
-	<!-- 					drops[i] = 0; -->
-	<!-- 				} -->
-	<!-- 				drops[i]++; -->
-	<!-- 			} -->
-	<!-- 		} -->
-	<!---->
-	<!-- 		setInterval(draw, 80); // Slower animation (was 35ms) -->
-	<!---->
-	<!-- 		window.addEventListener('resize', () => { -->
-	<!-- 			canvas.width = window.innerWidth; -->
-	<!-- 			canvas.height = window.innerHeight; -->
-	<!-- 		}); -->
-	<!-- 	} -->
-	<!---->
-	<!-- 	// Animate skill bars on load -->
-	<!-- 	function animateSkills() { -->
-	<!-- 		const skillFills = document.querySelectorAll('.skill-fill'); -->
-	<!-- 		skillFills.forEach((fill, index) => { -->
-	<!-- 			setTimeout(() => { -->
-	<!-- 				const width = fill.getAttribute('data-width'); -->
-	<!-- 				fill.style.width = width; -->
-	<!-- 			}, index * 200); -->
-	<!-- 		}); -->
-	<!-- 	} -->
-	<!---->
-	<!-- 	// Initialize everything when page loads -->
-	<!-- 	window.addEventListener('load', () => { -->
-	<!-- 		initMatrix(); -->
-	<!-- 		animateSkills(); -->
-	<!-- 	}); -->
-	<!---->
-	<!-- 	// Smooth scrolling for navigation -->
-	<!-- 	document.querySelectorAll('nav a').forEach(anchor => { -->
-	<!-- 		anchor.addEventListener('click', function (e) { -->
-	<!-- 			e.preventDefault(); -->
-	<!-- 			const target = document.querySelector(this.getAttribute('href')); -->
-	<!-- 			if (target) { -->
-	<!-- 				target.scrollIntoView({ -->
-	<!-- 					behavior: 'smooth', -->
-	<!-- 					block: 'start' -->
-	<!-- 				}); -->
-	<!-- 			} -->
-	<!-- 		}); -->
-	<!-- 	}); -->
-	<!-- </script> -->
+	<script src="script/shared.js"></script>
 </body>
-
 </html>
