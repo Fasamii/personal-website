@@ -14,7 +14,7 @@ document.querySelectorAll('.glitch').forEach(item => {
 			let glitched = '';
 
 			for (let i = 0; i < originalText.length; i++) {
-				if (Math.random() < 0.3) {
+				if (Math.random() < 0.2) {
 					glitched += glitchChars[Math.floor(Math.random() * glitchChars.length)];
 				} else {
 					glitched += originalText[i];
@@ -24,7 +24,7 @@ document.querySelectorAll('.glitch').forEach(item => {
 			this.textContent = glitched;
 			glitchCount++;
 
-			if (glitchCount > Math.min(originalText.length, 8)) {
+			if (glitchCount > Math.min(originalText.length, 4)) {
 				this.textContent = originalText;
 				clearInterval(glitchInterval);
 				glitchInterval = null;
