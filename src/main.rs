@@ -14,6 +14,7 @@ fn main() {
 }
 
 fn handle_request(request: Request) {
+    println!("{request:?}");
     let path = request.url().trim_start_matches('/');
     let mut path_buf = PathBuf::from("static");
 

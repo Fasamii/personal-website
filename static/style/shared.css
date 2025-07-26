@@ -28,7 +28,8 @@ body {
 }
 
 section {
-	width: 100%;
+	width: clamp(50vw, 88vw + 2rem, 600px);
+	height: fit-content;
 	padding: 18px;
 	border: 1px dashed #fff;
 	margin-bottom: 18px;
@@ -98,7 +99,6 @@ a {
   
   .button {
     font-size: 0.8rem;
-    min-height: 36px;
   }
   
   .current::after,
