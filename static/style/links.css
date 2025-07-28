@@ -1,4 +1,6 @@
-#links-list {}
+#links-list {
+	list-style: none;
+}
 
 #links-list>li {
 	margin-top: 8px;
