@@ -110,8 +110,7 @@ a {
 	}
 
 	nav>span#my-name-logo {
-		font-size: 0.8rem;
-		padding-left: 6px;
+		display: none;
 	}
 
 	.button {
