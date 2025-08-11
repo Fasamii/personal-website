@@ -3,6 +3,7 @@
 	flex-flow: column nowrap;
 	gap: 16px;
 }
+
 .skill-item {
 	width: 100%;
 	height: fit-content;
@@ -17,7 +18,7 @@
 	padding-right: 12px;
 	padding-top: 8.5px;
 
-	filter: brightness(0) invert(1); 
+	filter: brightness(0) invert(1);
 
 	transition: var(--transition);
 }
@@ -44,7 +45,7 @@
 }
 
 .skill-footer>a {
-	flex: 0 0 0px; 
+	flex: 0 0 0px;
 
 	display: inline-flex;
 	justify-content: end;
@@ -59,7 +60,7 @@
 }
 
 .skill-item:hover .skill-footer>a {
-	flex: 0 0 100px; 
+	flex: 0 0 100px;
 }
 
 h3 {
