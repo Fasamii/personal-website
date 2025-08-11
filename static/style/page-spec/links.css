@@ -1,7 +1,6 @@
 #links-list {
 	list-style: none;
-}
-
-#links-list>li {
-	margin-top: 8px;
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 8px;
 }
