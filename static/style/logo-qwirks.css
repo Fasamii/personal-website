@@ -1,0 +1,27 @@
+#skill-icon-c {
+	transform: scale(0.98);
+}
+
+#skill-icon-lua {
+	transform: scale(1.12);
+}
+
+#skill-icon-js {
+	transform: scale(1.02);
+}
+
+#skill-icon-css {
+	transform: scale(1.1);
+}
+
+#skill-icon-java {
+	transform: scale(1.8) translateX(2px) translateY(-2px);
+}
+
+#skill-icon-python {
+	transform: scale(1.2);
+}
+
+#skill-icon-rust {
+	transform: translateY(1px);
+}

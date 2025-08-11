@@ -1,0 +1,67 @@
+.skill-list {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 16px;
+}
+.skill-item {
+	width: 100%;
+	height: fit-content;
+
+	display: flex;
+}
+
+.skill-icon {
+	width: 48px;
+	height: auto;
+
+	padding-right: 12px;
+	padding-top: 8.5px;
+
+	filter: brightness(0) invert(1); 
+
+	transition: var(--transition);
+}
+
+.skill-info {
+	width: 100%;
+	height: fit-content;
+}
+
+.skill-footer {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+}
+
+.skill-footer>progress {
+	flex: 1;
+
+	display: flex;
+	white-space: nowrap;
+
+	transition: flex 200ms ease;
+}
+
+.skill-footer>a {
+	flex: 0 0 0px; 
+
+	display: inline-flex;
+	justify-content: end;
+	overflow: hidden;
+	white-space: nowrap;
+
+	transition: flex 200ms ease;
+}
+
+.skill-item:hover .skill-icon {
+	filter: none;
+}
+
+.skill-item:hover .skill-footer>a {
+	flex: 0 0 100px; 
+}
+
+h3 {
+	padding-bottom: 4px;
+}

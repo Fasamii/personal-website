@@ -3,7 +3,8 @@
 
 <head>
 	<title>MGK - Personal website</title>
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+	<!-- FIX: favicon not displaying only with that html -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
@@ -15,9 +16,11 @@
 		content="16-year-old Systems Programmer passionate about low-level programming and performance optimization">
 	<meta property="og:type" content="website">
 	<meta name="robots" content="index, follow">
+	<link rel="stylesheet" href="style/variables.css">
 	<link rel="stylesheet" href="style/shared.css">
 	<link rel="stylesheet" href="style/elements.css">
-	<link rel="stylesheet" href="style/stats.css">
+	<link rel="stylesheet" href="style/page-spec/stats.css">
+	<link rel="stylesheet" href="style/logo-qwirks.css">
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -60,172 +63,369 @@
 	<main>
 
 		<section>
-			<span class="font-bold glitch">Mikołaj G.&nbsp;Kozłowski</span>&ThickSpace;
+			<span class="font-big glitch">Mikołaj G.&nbsp;Kozłowski</span>&ThickSpace;
 			<span class="font">AGE:</span><span id="age" class="font"></span><br>
 			<p class="font">CODE VESSEL</p>
 		</section>
 
 		<section>
-			<h3 class="font-bold glitch">PROGRAMMING LANGUAGES</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-c" class="font">C : ADVANCED</label>
-					<progress id="skill-c" value="90" max="100" aria-label="C : ADVANCED"></progress>
-				</li>
-				<li>
-					<label for="skill-lua" class="font">LUA : EXPERIENCED</label>
-					<progress id="skill-lua" value="78" max="100" aria-label="LUA : EXPERIENCED"></progress>
-				</li>
-				<li>
-					<label for="skill-js" class="font">JAVASCRIPT : INTERMEDIATE</label>
-					<progress id="skill-js" value="60" max="100"
-						aria-label="JAVASCRIPT : WELL INTERMEDIATE"></progress>
-				</li>
-				<li>
-					<label for="skill-css" class="font">CSS : INTERMEDIATE</label>
-					<progress id="skill-css" value="60" max="100"
-						aria-label="CSS : INTERMEDIATE & HATE"></progress>
-				</li>
-				<li>
-					<label for="skill-java" class="font">JAVA : INTERMEDIATE</label>
-					<progress id="skill-java" value="45" max="100"
-						aria-label="JAVA : INTERMEDIATE"></progress>
-				</li>
-				<li>
+			<h3 class="font-big glitch">PROGRAMMING LANGUAGES</h3>
+			<ul class="skill-list">
 
-					<label for="skill-python" class="font">PYTHON : INTERMEDIATE</label>
-					<progress id="skill-python" value="40" max="100"
-						aria-label="PYTHON : INTERMEDIATE"></progress>
+				<li class="skill-item">
+					<img id="skill-icon-c" class="skill-icon" src="assets/logos/c.svg" alt="">
+					<div class="skill-info">
+						<span class="font">C</span>
+						<span class="font-small">ADVANCED</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-c" value="90" max="100"
+								aria-label="C : ADVANCED"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
-				<li>
-					<label for="skill-rust" class="font">RUST : BEGINNER</label>
-					<progress id="skill-rust" value="24" max="100" aria-label="RUST : BEGINNER"></progress>
+
+				<li class="skill-item">
+					<img id="skill-icon-lua" class="skill-icon" src="assets/logos/lua.svg" alt="">
+					<div class="skill-info">
+						<span class="font">LUA</span>
+						<span class="font-small">EXPERIENCED</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-lua" value="78" max="100"
+								aria-label="lua : EXPERIENCED"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
-				<li>
-					<label for="skill-asm" class="font">ASSEMBLY : USELESS</label>
-					<progress id="skill-asm" value="4" max="100" aria-label="ASSEMBLY : USELESS"></progress>
+
+				<li class="skill-item">
+					<img id="skill-icon-js" class="skill-icon" src="assets/logos/js.svg" alt="">
+					<div class="skill-info">
+						<span class="font">JAVASCRIPT</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-js" value="60" max="100"
+								aria-label="JavaScript : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
-				<!-- TODO: make that work when you have time -->
-				<!-- <li> -->
-				<!-- 	<label for="langsp" class="font"></label> -->
-				<!-- 	<div id="langsp" class="font"> -->
-				<!-- 	</div> -->
-				<!-- </li> -->
+
+				<li class="skill-item">
+					<img id="skill-icon-css" class="skill-icon" src="assets/logos/css.svg" alt="">
+					<div class="skill-info">
+						<span class="font">CSS</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-css" value="60" max="100"
+								aria-label="CSS : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<img id="skill-icon-java" class="skill-icon" src="assets/logos/java.svg" alt="">
+					<div class="skill-info">
+						<span class="font">JAVA</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-java" value="45" max="100"
+								aria-label="Java : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<img id="skill-icon-python" class="skill-icon" src="assets/logos/py.svg" alt="">
+					<div class="skill-info">
+						<span class="font">PYTHON</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-python" value="40" max="100"
+								aria-label="Python : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<img id="skill-icon-rust" class="skill-icon" src="assets/logos/rust.svg" alt="">
+					<div class="skill-info">
+						<span class="font">RUST</span>
+						<span class="font-small">BEGINNER</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-rust" value="24" max="100"
+								aria-label="Rust : BEGINNER"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<img id="skill-icon-asm" class="skill-icon" src="assets/logos/asm.svg" alt="">
+					<div class="skill-info">
+						<span class="font">ASM</span>
+						<span class="font-small">USELESS</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-asm" value="4" max="100"
+								aria-label="ASM : USELESS"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</section>
 
 		<section>
-			<h3 class="font-bold glitch">TOOLS</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-nvim" class="font">NVIM : EXPERIENCED</label>
-					<progress id="skill-nvim" value="74" max="100" aria-label="NVIM : EXPERIENCED"></progress>
-				</li>
-				<li>
-					<label for="skill-node" class="font">NODE.JS : INTERMEDIATE</label>
-					<progress id="skill-node" value="50" max="100"
-						aria-label="NODE.JS : INTERMEDIATE"></progress>
-				</li>
-				<li>
-					<label for="skill-npm" class="font">NPM : INTERMEDIATE</label>
-					<progress id="skill-npm" value="48" max="100" aria-label="NPM : INTERMEDIATE"></progress>
+			<h3 class="font-big glitch">TOOLS</h3>
+			<ul class="skill-list">
+
+				<li class="skill-item">
+					<img id="skill-icon-nvim" class="skill-icon" src="assets/logos/nvim.svg" alt="">
+					<div class="skill-info">
+						<span class="font">NEOVIM</span>
+						<span class="font-small">EXPERIENCED</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-nvim" value="74" max="100"
+								aria-label="Neovim : EXPERIENCED"></progress>
+						</div>
+					</div>
 				</li>
 
-			</ul>
-
-		</section>
-
-		<section>
-			<h3 class="font-bold glitch">PLATFORMS & OSs</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-linux" class="font">LINUX : EXPERIENCED</label>
-					<progress id="skill-linux" value="73" max="100"
-						aria-label="LINUX : EXPERIENCED"></progress>
-				</li>
-				<li>
-					<label for="skill-drm-kms" class="font">DRM/KMS : INTERMEDIATE</label>
-					<progress id="skill-drm-kms" value="35" max="100"
-						aria-label="DMR/KMD : INTERMEDIATE"></progress>
-				</li>
-				<li>
-					<label for="skill-embedded" class="font">EMBEDDED : BEGINNER</label>
-					<progress id="skill-embedded" value="25" max="100"
-						aria-label="EMBEDDED : BEGINNER"></progress>
-				</li>
-			</ul>
-
-		</section>
-
-		<section>
-			<h3 class="font-bold">DevOps & Version Control</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-git" class="font">GIT : INTERMEDIATE</label>
-					<progress id="skill-git" value="55" max="100" aria-label="GIT : INTERMEDIATE"></progress>
+				<li class="skill-item">
+					<img id="skill-icon-node" class="skill-icon" src="assets/logos/node.svg" alt="">
+					<div class="skill-info">
+						<span class="font">NODE.JS</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-node" value="50" max="100"
+								aria-label="Node : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
 
-				<li>
-					<label for="skill-github" class="font">GITHUB : INTERMEDIATE</label>
-					<progress id="skill-github" value="45" max="100"
-						aria-label="GITHUB : INTERMEDIATE"></progress>
-				</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3 class="font-bold glitch">DATABASEs & BACKEND</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-sql" class="font">SQL : INTERMEDIATE</label>
-					<progress id="skill-sql" value="30" max="100" aria-label="SQL : INTERMEDIATE"></progress>
-				</li>
-			</ul>
-		</section>
-
-		<section>
-			<h3 class="font-bold glitch">OTHER</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-algorithms" class="font">ALGORITHMS : INTERMEDIATE</label>
-					<progress id="skill-algorithms" value="50" max="100"
-						aria-label="ALGORITHMS : INTERMEDIATE"></progress>
-				</li>
-				<li>
-					<label for="skill-data-structures" class="font">DATA STRUCTURES : INTERMEDIATE</label>
-					<progress id="skill-algorithms" value="30" max="100"
-						aria-label="DATA STRUCTURES : INTERMEDIATE"></progress>
-				</li>
-				<li>
-					<label for="skill-networking" class="font">NETWORKING : INTERMEDIATE</label>
-					<progress id="skill-networking" value="28" max="100"></progress>
-				</li>
-				<li>
-					<label for="skill-math" class="font">MATH : BEGINNER</label>
-					<progress id="skill-math" value="18" max="100" aria-label="MATH : BEGINNER"></progress>
+				<li class="skill-item">
+					<img id="skill-icon-npm" class="skill-icon" src="assets/logos/npm.svg" alt="">
+					<div class="skill-info">
+						<span class="font">NPM</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-npm" value="48" max="100"
+								aria-label="NPM : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
 
 			</ul>
 		</section>
 
 		<section>
-			<h3 class="font-bold glitch">Soft & Meta Skills</h3>
-			<ul class="skills-list">
-				<li>
-					<label for="skill-polish" class="font">POLISH : NATIVE</label>
-					<progress id="skill-polish" value="100" max="100"
-						aria-label="ENGLISH : CONVERSATIONAL"></progress>
+			<h3 class="font-big glitch">PLATFORMS & OSs</h3>
+			<ul class="skill-list">
+
+				<li class="skill-item">
+					<img id="skill-icon-linux" class="skill-icon" src="assets/logos/linux.svg" alt="">
+					<div class="skill-info">
+						<span class="font">LINUX</span>
+						<span class="font-small">EXPERIENCED</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-linux" value="73" max="100"
+								aria-label="Linux: EXPERIENCED"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
-				<li>
-					<label for="skill-teamwork" class="font">TEAMWORK : STRONG</label>
-					<progress id="skill-teamwork" value="80" max="100"
-						aria-label="TEAMWORK : STRONG"></progress>
+
+				<li class="skill-item">
+					<img id="skill-icon-embedded" class="skill-icon" src="assets/logos/embedded.svg" alt="">
+					<div class="skill-info">
+						<span class="font">EMBEDDED</span>
+						<span class="font-small">BEGINNER</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-embedded" value="25" max="100"
+								aria-label="Embedded : BEGINNER"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
-				<li>
-					<label for="skill-english" class="font">ENGLISH : CONVERSATIONAL</label>
-					<progress id="skill-english" value="50" max="100"
-						aria-label="ENGLISH : CONVERSATIONAL"></progress>
+
+			</ul>
+		</section>
+
+		<section>
+			<h3 class="font-big glitch">DevOps & Version Control</h3>
+			<ul class="skill-list">
+
+				<li class="skill-item">
+					<img id="skill-icon-git" class="skill-icon" src="assets/logos/git.svg" alt="">
+					<div class="skill-info">
+						<span class="font">GIT</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-git" value="55" max="100"
+								aria-label="GIT : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
 				</li>
+
+				<li class="skill-item">
+					<img id="skill-icon-github" class="skill-icon" src="assets/logos/github.svg" alt="">
+					<div class="skill-info">
+						<span class="font">GITHUB</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-github" value="45" max="100"
+								aria-label="GITHUB : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</section>
+
+		<section>
+			<h3 class="font-big glitch">OTHER</h3>
+			<ul class="skill-list">
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">ALGORITHMS</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-algorithms" value="50" max="100"
+								aria-label="Algorithms : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">DATA STRUCTURES</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-data-structures" value="30" max="100"
+								aria-label="data structures : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">NETWORKING</span>
+						<span class="font-small">INTERMEDIATE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-networking" value="28" max="100"
+								aria-label="networking : INTERMEDIATE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">MATH</span>
+						<span class="font-small">BEGINNER</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-math" value="18" max="100"
+								aria-label="math : BEGINNER"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</section>
+
+		<section>
+			<h3 class="font-big glitch">SOFT & META SKILLS</h3>
+			<ul class="skill-list">
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">POLISH</span>
+						<span class="font-small">NATIVE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-polish" value="100" max="100"
+								aria-label="polish : NATIVE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">TEAMWORK</span>
+						<span class="font-small">STRONG</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-teamwork" value="80" max="100"
+								aria-label="teamwork : STRONG"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
+				<li class="skill-item">
+					<div class="skill-info">
+						<span class="font">ENGLISH</span>
+						<span class="font-small">COMMUNICATIVE</span>
+						<div class="skill-footer">
+							<progress id="skill-progress-english" value="50" max="100"
+								aria-label="english : COMMUNICATIVE"></progress>
+							<a href="https://github.com/Fasamii">
+								<span
+									class="font-small button-inline">PROJECTS&ThinSpace;&gt;</span></a>
+						</div>
+					</div>
+				</li>
+
 			</ul>
 		</section>
 

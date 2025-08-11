@@ -11,7 +11,7 @@
 html {
 	width: 100%;
 	min-height: 100vh;
-	background-color: black;
+	background-color: var(--background-color-focus);
 }
 
 body {
@@ -24,6 +24,8 @@ body {
 	align-items: center;
 	align-content: center;
 
+	background-color: var(--background-color-focus);
+
 	flex-flow: column nowrap;
 }
 
@@ -31,12 +33,12 @@ section {
 	width: clamp(50vw, 88vw + 2rem, 600px);
 	height: fit-content;
 	padding: 18px;
-	border: 1px dashed #fff;
+	border: var(--border);
 	margin-bottom: 18px;
 
-	background-color: rgba(0, 0, 0, 0.35);
+	background-color: var(--background-color);
 
-	transition: 200ms ease;
+	transition: var(--transition);
 }
 
 section:hover {
