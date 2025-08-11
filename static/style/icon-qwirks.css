@@ -25,3 +25,11 @@
 #skill-icon-rust {
 	transform: translateY(1px);
 }
+
+#skill-icon-node {
+	transform: scale(1.14);
+}
+
+#skill-icon-npm {
+	transform: scale(0.98);
+}
