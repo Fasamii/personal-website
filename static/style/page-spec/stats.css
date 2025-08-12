@@ -41,7 +41,7 @@
 	display: flex;
 	white-space: nowrap;
 
-	transition: flex 200ms ease;
+	transition: width 0.28s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .skill-footer>a {
@@ -52,7 +52,9 @@
 	overflow: hidden;
 	white-space: nowrap;
 
-	transition: flex 200ms ease;
+	transition:
+		flex 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+		padding 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .skill-item:hover .skill-icon {
@@ -61,6 +63,9 @@
 
 .skill-item:hover .skill-footer>a {
 	flex: 0 0 100px;
+	transition:
+		flex 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+		padding 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 h3 {
