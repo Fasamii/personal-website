@@ -37,3 +37,7 @@
 #skill-icon-npm {
 	transform: scale(0.98);
 }
+
+#skill-icon-cargo {
+	transform: scale(1.9) translateX(3px) translateY(-2px);
+}
