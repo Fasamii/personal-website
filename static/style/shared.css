@@ -38,7 +38,7 @@ section {
 
 	background-color: var(--background-color);
 
-	transition: var(--transition);
+	transition: 140ms ease;
 }
 
 section:hover {
@@ -52,7 +52,9 @@ section:hover {
 		0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
-
+section:not(:hover) {
+	transition: box-shadow 1s ease;
+}
 
 nav {
 	position: fixed;

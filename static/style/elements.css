@@ -71,6 +71,7 @@
 .button:active {
 	transform: scale(0.90, 0.98);
 }
+
 .button-inline:active {
 	transform: scale(0.90, 0.94);
 }
@@ -118,4 +119,23 @@ progress::-moz-progress-bar {
 
 progress::-webkit-progress-value {
 	background: white;
+}
+
+.footer-note {
+	position: sticky;
+	bottom: 0;
+
+	text-align: center;
+	font-weight: 600;
+
+	margin: auto;
+	margin-bottom: 28px;
+	padding: 8px;
+
+	border-radius: 8px 8px 8px 8px;
+	background-color: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(32px);
+	-webkit-backdrop-filter: blur(32px);
+
+	transition: 0.5s ease;
 }
