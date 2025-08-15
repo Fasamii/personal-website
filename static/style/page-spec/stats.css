@@ -1,3 +1,7 @@
+h3 {
+	padding-bottom: 4px;
+}
+
 .skill-list {
 	display: flex;
 	flex-flow: column nowrap;
@@ -57,17 +61,15 @@
 		padding 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.skill-item:hover .skill-icon {
+.skill-item:hover .skill-icon,
+.skill-item:focus-within .skill-icon {
 	filter: none;
 }
 
-.skill-item:hover .skill-footer>a {
+.skill-item:hover .skill-footer>a,
+.skill-item:focus-within .skill-footer>a {
 	flex: 0 0 100px;
 	transition:
 		flex 0.3s cubic-bezier(0.25, 1, 0.5, 1),
 		padding 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-h3 {
-	padding-bottom: 4px;
 }

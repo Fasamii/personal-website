@@ -26,6 +26,10 @@
 	transform: translateY(1px);
 }
 
+#skill-icon-asm {
+	transform: scale(1.1) scaleX(1.11) translateX(0.4px) translateY(-1px);
+}
+
 #skill-icon-node {
 	transform: scale(1.14);
 }
