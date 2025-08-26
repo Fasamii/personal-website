@@ -131,9 +131,10 @@ progress::-webkit-progress-value {
 	margin: auto;
 	margin-bottom: 28px;
 	padding: 8px;
+	padding-inline: 10px;
 
 	border-radius: 8px 8px 8px 8px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(32px);
 	-webkit-backdrop-filter: blur(32px);
 

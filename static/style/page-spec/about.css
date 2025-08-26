@@ -11,3 +11,7 @@
 	flex-flow: row nowrap;
 	gap: 12px;
 }
+
+#summary-section > h3 {
+	margin-bottom: 8px;
+}

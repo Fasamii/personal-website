@@ -56,6 +56,24 @@ section:not(:hover) {
 	transition: box-shadow 1s ease;
 }
 
+hr {
+	border: none;
+	height: 1px;
+	background-color: rgba(255, 255, 255, 0.3);
+	margin: 16px 0;
+
+	transition: 140ms ease;
+}
+
+section:hover hr {
+	background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+section:not(:hover) hr {
+	transition: 1s ease;
+}
+
 nav {
 	position: fixed;
 	top: 0;
