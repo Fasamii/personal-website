@@ -43,7 +43,9 @@ document.querySelectorAll('.glitch').forEach(item => {
 	});
 });
 
-const my_age = new Date(new Date() - new Date(2008, 12, 5)).getFullYear() - 1970;
+const birth_day = new Date(2008, 12, 5);
+const today = new Date();
+const age = new Date(today - birth_day).getFullYear() - 1970;
 document.querySelectorAll(`#age`).forEach(item => {
-	item.textContent = my_age > 0 ? my_age : "not born yet wtf";
+	item.textContent = age > 0 ? age : "not born yet wtf";
 });
