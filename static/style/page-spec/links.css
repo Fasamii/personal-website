@@ -4,3 +4,34 @@
 	flex-flow: column nowrap;
 	gap: 8px;
 }
+
+.link-container {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+}
+
+.link-container>a {
+	flex: 1;
+}
+.link-container>.comment{
+	flex: 0 0 0px;
+
+	display: inline-flex;
+	justify-content: end;
+	overflow: hidden;
+	white-space: nowrap;
+
+	transition:
+		flex 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+		padding 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.link-container:hover .comment,
+.link-container:focus-within .comment {
+	flex: 0 0 250px;
+	transition:
+		flex 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+		padding 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}

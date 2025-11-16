@@ -45,7 +45,8 @@ h3 {
 	display: flex;
 	white-space: nowrap;
 
-	transition: width 0.28s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	/* TODO: Remove that if not needed anymore  */
+	/* transition: width 0.28s cubic-bezier(0.68, -0.55, 0.27, 1.55); */
 }
 
 .skill-footer>a {
